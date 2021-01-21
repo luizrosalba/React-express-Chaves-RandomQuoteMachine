@@ -42,7 +42,21 @@ app.get('/frases', function(req, res) {
     autor: 
     [   
       "Roberto Gómez Bolaños",
-      "Roberto Gómez Bolaños"
+      "Roberto Gómez Bolanos",
+      "Roberto Gomez Bolaños",
+      "Roberto Gómez bolaños",
+      "Roberto gómez Bolaños",
+      "Roberto Gómez Bolaño",
+      "Roberrto Gómez Bolaños",
+      "Roberto Gómmez Bolaños",
+      "Robberto Gómez Bolaños",
+      "Roberrto Gómez Bolaños",
+      "Robertto Gómez Bolaños",
+      "Roberto Gómmez Bolaños",
+      "Roberto Gómezz Bolaños",
+      "Roberto Gómez Boolaños",
+      "Roberto Gómez Bolaaños",
+      "Roberto Gómeez Bolaños"
     ]
   }
   res.status(200).send(data);

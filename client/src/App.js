@@ -15,10 +15,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-
+    let value = this.getRandomInt(0,15);
      this.callApi()
-       .then(res =>this.setState({ frase: res.frases[this.getRandomInt(0,15)],
-                                    autor: res.autor   }))
+       .then(res => {this.setState({ frase: res.frases[value],autor: res.autor[value]})})
        .catch(err => console.log(err));
   }
 
@@ -32,19 +31,15 @@ class App extends Component {
     const response = await fetch('/frases');
     const body = await response.json();
     if (response.status !== 200) throw Error(body.message);
-    //done();
+    console.log(body);
     return body;
   };
 
   handleClick()
   {
+    let value = this.getRandomInt(0,15);
     this.callApi()
-    .then(
-        res => {
-          this.setState({ frase: res.frases[this.getRandomInt(0,15)],
-            autor: res.autor   })
-        }
-    )
+    .then(res => {this.setState({ frase: res.frases[value],autor: res.autor[value]})})
     .catch(err => console.log(err));
     
   }
