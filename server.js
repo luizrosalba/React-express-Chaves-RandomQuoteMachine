@@ -39,7 +39,11 @@ app.get('/frases', function(req, res) {
         "Boa noite meus amigos. Boa noite vizinhança. Prometemos despedirmos sem dizer adeus jamais",
         "Seu Madruga, o senhor não vai morrer. Vão matar o senhor!"
     ],
-    autor: "Roberto Gómez Bolaños"    
+    autor: 
+    [   
+      "Roberto Gómez Bolaños",
+      "Roberto Gómez Bolaños"
+    ]
   }
   res.status(200).send(data);
 });

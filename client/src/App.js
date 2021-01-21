@@ -32,8 +32,7 @@ class App extends Component {
     const response = await fetch('/frases');
     const body = await response.json();
     if (response.status !== 200) throw Error(body.message);
-    //console.log(body.autor)
-    //console.log(body.frases)
+    //done();
     return body;
   };
 
